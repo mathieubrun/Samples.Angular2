@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=UTF-8>
+    <title>Angular2 app</title>
+    <base href="/">
+</head>
+<body>
+    <!-- Application component -->
+    <my-app>loading...</my-app>
+
+    <!-- Shims and polyfills for IE, in this exact order -->
+    <script src="vendor/es6-shim.js"></script>
+    <script src="vendor/system-polyfills.js"></script>
+    <script src="vendor/shims_for_IE.js"></script>
+
+    <script src="vendor/angular2-polyfills.js"></script>
+    <script src="vendor/system.js"></script>
+    <script src="vendor/Rx.js"></script>
+    <script src="vendor/angular2.dev.js"></script>
+
+    <script>
+        // source files are located in app folder, relative to index.html
+        System.config({
+            packages: {
+                'app': { defaultExtension: 'js' }
+            }
+        });
+
+        // application boostrapper file
+        System.import('app/boot')
+              .then(null, console.error.bind(console));
+    </script>
+</body>
+</html>
