@@ -1,5 +1,5 @@
 {
-  "name": "Samples.VS2015Angular2",
+  "name": "samples-angular2",
   "version": "1.0.0",
   "description": "Sample Visual Studio 2015 Angular2 project",
   "dependencies": {

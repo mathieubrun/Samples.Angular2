@@ -39,7 +39,8 @@ module.exports = function (grunt) {
                 expand: true, flatten: true,
                 src: [
                     'src/html/**/*.html',
-                    'src/html/**/*.ico'
+                    'src/html/**/*.ico',
+                    'src/css/**/*.css'
                 ],
                 dest: 'wwwroot'
             }
