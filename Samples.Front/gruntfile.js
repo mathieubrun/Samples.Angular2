@@ -43,6 +43,15 @@ module.exports = function (grunt) {
                     'src/css/**/*.css'
                 ],
                 dest: 'wwwroot'
+            },
+            app: {
+                expand: true,
+                cwd: 'src/ts',
+                src: [
+                   '**/*.html',
+                   '**/*.css'
+                ],
+                dest: 'wwwroot/app'
             }
         },
         
