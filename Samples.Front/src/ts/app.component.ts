@@ -1,32 +1,42 @@
-import {Component, OnInit} from 'angular2/core';
-import {Hero} from './heroes/hero';
-import {HeroDetailComponent} from './heroes/hero-detail.component';
-import {HeroService} from './heroes/hero.service';
+import { Component } from 'angular2/core';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+
+import { HeroService } from './heroes/hero.service';
+import { DashboardComponent } from './dashboard.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './heroes/hero-detail.component';
 
 @Component({
     selector: 'my-app',
     moduleId: module.id,
     templateUrl: 'app.component.html',
     styleUrls: ['app.component.css'],
-    directives: [HeroDetailComponent],
-    providers: [HeroService]
+    directives: [ROUTER_DIRECTIVES],
+    providers: [
+        ROUTER_PROVIDERS,
+        HeroService
+    ]
 })
-export class AppComponent implements OnInit {
+@RouteConfig([
+    {
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: DashboardComponent,
+        useAsDefault: true
+    },
+    {
+        path: '/detail/:id',
+        name: 'HeroDetail',
+        component: HeroDetailComponent
+    },
+    {
+        path: '/heroes',
+        name: 'Heroes',
+        component: HeroesComponent
+    }
+])
+export class AppComponent {
     title = 'Tour of Heroes';
-    heroes: Hero[];
-    selectedHero: Hero;
-
-    constructor(private _heroService: HeroService) { }
-
-    getHeroes() {
-        this._heroService.getHeroes().then(heroes => this.heroes = heroes);
-    }
-
-    ngOnInit() {
-        this.getHeroes();
-    }
-
-    onSelect(hero: Hero) { this.selectedHero = hero; }
 }
 
 
