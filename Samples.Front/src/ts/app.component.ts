@@ -2,7 +2,7 @@ import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
 import { HeroService } from './heroes/hero.service';
-import { DashboardComponent } from './dashboard.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './heroes/hero-detail.component';
 

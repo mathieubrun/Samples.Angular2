@@ -2,7 +2,7 @@
 module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks("grunt-ts");
+    grunt.loadNpmTasks("grunt-shell");
 
     grunt.initConfig({
         watch: {
@@ -55,13 +55,9 @@ module.exports = function (grunt) {
                 dest: 'wwwroot/app'
             }
         },
-        
-        ts : {
-            app: {
-                src: 'src/ts/**/*.ts',
-                outDir: 'wwwroot/app',
-                tsconfig: 'src/ts/tsconfig.json'
-            }
+
+        shell:{
+            tsc: 'tsc -p src/ts'
         }
     });
 };
