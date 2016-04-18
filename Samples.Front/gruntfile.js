@@ -2,7 +2,7 @@
 module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks("grunt-ts");
+    grunt.loadNpmTasks("grunt-shell");
 
     grunt.initConfig({
         watch: {
@@ -28,6 +28,7 @@ module.exports = function (grunt) {
                 src: [
                     'node_modules/angular2/bundles/angular2-polyfills.js',
                     'node_modules/angular2/bundles/angular2.dev.js',
+                    'node_modules/angular2/bundles/router.dev.js',
                     'node_modules/angular2/es6/dev/src/testing/shims_for_IE.js',
                     'node_modules/rxjs/bundles/Rx.js',
                     'node_modules/es6-shim/es6-shim.js',
@@ -54,13 +55,9 @@ module.exports = function (grunt) {
                 dest: 'wwwroot/app'
             }
         },
-        
-        ts : {
-            app: {
-                src: 'src/ts/**/*.ts',
-                outDir: 'wwwroot/app',
-                tsconfig: 'src/ts/tsconfig.json'
-            }
+
+        shell:{
+            tsc: 'tsc -p src/ts'
         }
     });
 };
