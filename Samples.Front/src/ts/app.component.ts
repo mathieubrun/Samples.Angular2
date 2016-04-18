@@ -1,34 +1,44 @@
-import {Component} from 'angular2/core';
-import {Hero} from './heroes/hero';
-import {HeroDetailComponent} from './heroes/hero-detail.component';
+import { Component } from 'angular2/core';
+import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+
+import { HeroService } from './heroes/hero.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './heroes/hero-detail.component';
 
 @Component({
     selector: 'my-app',
     moduleId: module.id,
     templateUrl: 'app.component.html',
     styleUrls: ['app.component.css'],
-    directives: [HeroDetailComponent]
+    directives: [ROUTER_DIRECTIVES],
+    providers: [
+        ROUTER_PROVIDERS,
+        HeroService
+    ]
 })
+@RouteConfig([
+    {
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: DashboardComponent,
+        useAsDefault: true
+    },
+    {
+        path: '/detail/:id',
+        name: 'HeroDetail',
+        component: HeroDetailComponent
+    },
+    {
+        path: '/heroes',
+        name: 'Heroes',
+        component: HeroesComponent
+    }
+])
 export class AppComponent {
     title = 'Tour of Heroes';
-    heroes = HEROES;
-    selectedHero: Hero;
-
-    onSelect(hero: Hero) { this.selectedHero = hero; }
 }
 
-var HEROES: Hero[] = [
-    { "id": 11, "name": "Mr. Nice" },
-    { "id": 12, "name": "Narco" },
-    { "id": 13, "name": "Bombasto" },
-    { "id": 14, "name": "Celeritas" },
-    { "id": 15, "name": "Magneta" },
-    { "id": 16, "name": "RubberMan" },
-    { "id": 17, "name": "Dynama" },
-    { "id": 18, "name": "Dr IQ" },
-    { "id": 19, "name": "Magma" },
-    { "id": 20, "name": "Tornado" }
-];
 
 /*
 Copyright 2016 Google Inc. All Rights Reserved.
