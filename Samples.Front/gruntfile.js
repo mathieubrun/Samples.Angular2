@@ -31,7 +31,7 @@ module.exports = function (grunt) {
                     'node_modules/angular2/bundles/router.dev.js',
                     'node_modules/angular2/es6/dev/src/testing/shims_for_IE.js',
                     'node_modules/rxjs/bundles/Rx.js',
-                    'node_modules/es6-shim/es6-shim.js',
+                    'node_modules/core-js/client/core.js',
                     'node_modules/systemjs/dist/system.js',
                     'node_modules/systemjs/dist/system-polyfills.js'],
                 dest: 'wwwroot/vendor'
