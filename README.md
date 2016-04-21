@@ -9,3 +9,6 @@ More details
 ------------
 
 - [Part 1 : hello world](https://mathieubrun.github.io/archive/2016/03/05/aspnet-5-angular-2-part1-hello-world)
+- [Part 2 : tour of heroes : hero editor](http://mathieubrun.github.io/archive/2016/03/13/aspnet-5-angular-2-part2-tour-of-heroes)
+- [Part 3 : tour of heroes : services and routing](http://mathieubrun.github.io/archive/2016/04/18/aspnet-5-angular-2-part3-tour-of-heroes)
+- [Part 4 : source mapping](http://mathieubrun.github.io/archive/2016/04/21/aspnet-5-angular-2-part4-source-mapping)
