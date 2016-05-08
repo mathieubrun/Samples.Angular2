@@ -6,11 +6,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './heroes/hero-detail.component';
 
+import "../css/styles.css";
+
 @Component({
     selector: 'my-app',
-    moduleId: module.id,
-    templateUrl: 'app.component.html',
-    styleUrls: ['app.component.css'],
+    template: require('./app.component.html'),
+    styles: [require('./app.component.css')],
     directives: [ROUTER_DIRECTIVES],
     providers: [
         ROUTER_PROVIDERS,
