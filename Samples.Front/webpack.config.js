@@ -14,7 +14,7 @@ module.exports = function makeWebpackConfig() {
     var config = {};
 
     config.entry = {
-        'polyfills': ['es6-shim/es6-shim.js', 'angular2/bundles/angular2-polyfills'],
+        'polyfills': ['core-js/client/core', 'angular2/bundles/angular2-polyfills'],
         'vendor': './src/vendor.ts',
         'app': './src/main.ts' // our angular app
     };
