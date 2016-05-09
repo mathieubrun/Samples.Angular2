@@ -4,33 +4,14 @@
     <meta charset=UTF-8>
     <title>Angular2 app</title>
     <base href="/">
-
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Shims and polyfills for IE -->
-    <script src="vendor/core.js"></script>
-
-    <script src="vendor/angular2-polyfills.js"></script>
-    <script src="vendor/system.js"></script>
-    <script src="vendor/Rx.js"></script>
-    <script src="vendor/angular2.dev.js"></script>
-    <script src="vendor/router.dev.js"></script>
-
-    <script>
-        // source files are located in app folder, relative to index.html
-        System.config({
-            packages: {
-                'app': { defaultExtension: 'js' }
-            }
-        });
-
-        // application boostrapper file
-        System.import('app/main')
-              .then(null, console.error.bind(console));
-    </script>
 </head>
 <body>
     <!-- Application component -->
     <my-app>loading...</my-app>
+
+    <!-- Application -->
+    <script src="js/polyfills.js"></script>
+    <script src="js/vendor.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
