@@ -25,4 +25,5 @@ before_build:
   - cd %APPVEYOR_BUILD_FOLDER%
     
 artifacts:
+  # put whole folder into a zip file
   - path: Samples.Front\wwwroot
