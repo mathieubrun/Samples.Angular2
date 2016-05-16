@@ -21,6 +21,8 @@ before_build:
   - npm install
   # run webpack with production flag
   - webpack -p
-  
+  # back to original folder
+  - cd %APPVEYOR_BUILD_FOLDER%
+    
 artifacts:
   - path: Samples.Front\wwwroot
