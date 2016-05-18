@@ -15,3 +15,4 @@ More details
 - [Part 3 : tour of heroes : services and routing](http://mathieubrun.github.io/archive/2016/04/18/aspnet-5-angular-2-part3-tour-of-heroes)
 - [Part 4 : source mapping](http://mathieubrun.github.io/archive/2016/04/21/aspnet-5-angular-2-part4-source-mapping)
 - [Part 5 : webpack](http://mathieubrun.github.io/archive/2016/05/08/aspnet-5-angular-2-part5-webpack)
+- [Part 6 : appveyor](http://mathieubrun.github.io/archive/2016/05/16/aspnet-5-angular-2-part6-appveyor)
