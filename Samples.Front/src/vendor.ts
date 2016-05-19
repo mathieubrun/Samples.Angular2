@@ -1,9 +1,8 @@
 // Angular 2
-import 'angular2/platform/browser';
-import 'angular2/platform/common_dom';
-import 'angular2/core';
-import 'angular2/router';
-import 'angular2/http';
+import '@angular/platform-browser-dynamic';
+import '@angular/core';
+import '@angular/router-deprecated';
+import '@angular/http';
 
 // RxJS
 import 'rxjs';

@@ -14,7 +14,7 @@ module.exports = function makeWebpackConfig() {
     var config = {};
 
     config.entry = {
-        'polyfills': ['core-js/client/core', 'angular2/bundles/angular2-polyfills'],
+        'polyfills': './src/polyfills.ts',
         'vendor': './src/vendor.ts',
         'app': './src/main.ts' // our angular app
     };
