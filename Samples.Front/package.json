@@ -4,7 +4,8 @@
   "description": "Sample Visual Studio 2015 Angular2 project",
   "scripts": {
     "postinstall": "typings install",
-    "webpack-dev": "webpack -d --color"
+    "webpack-dev": "webpack -d --color",
+    "build": "rimraf wwwroot && webpack --config config/webpack.prod.js --progress --profile --bail"
   },
   "dependencies": {
     "@angular/common": "2.0.0-rc.1",
@@ -27,14 +28,18 @@
   },
   "devDependencies": {
     "webpack": "1.13.0",
+    "rimraf": "2.5.2",
 
     "copy-webpack-plugin": "3.0.0",
     "css-loader": "0.23.1",
+    "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.8.5",
     "html-loader": "0.4.3",
+    "html-webpack-plugin": "2.19.0",
     "raw-loader": "0.5.1",
     "style-loader": "0.13.1",
     "ts-loader": "0.8.2",
+    "webpack-merge": "0.13.0",
 
     "typescript": "1.8.10",
     "typings": "1.0.1"
