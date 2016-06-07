@@ -5,8 +5,7 @@ environment:
 # scripts that run after cloning repository
 install:
   # install DNX
-  - dnvm upgrade
-  - dotnet restore
+  - dnvm upgrad
   # install node 
   - ps: Install-Product node $Env:nodejs_version
   - npm install -g npm
@@ -17,6 +16,7 @@ before_build:
   # install node modules
   - cd %APPVEYOR_BUILD_FOLDER%
   - cd Samples.Front
+  - dotnet restore
   - npm install
   - npm run postinstall
   - npm run build
