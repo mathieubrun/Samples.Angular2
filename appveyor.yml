@@ -19,6 +19,7 @@ before_build:
   - cd Samples.Front
   - dnu restore
   - npm install
+  - npm run postinstall
   # run webpack with production flag
   - npm run build
   # back to original folder
