@@ -19,6 +19,7 @@ before_build:
   - cd %APPVEYOR_BUILD_FOLDER%
   - cd Samples.Front
   - npm install
+  - npm run postinstall
   # run webpack with production flag
   - webpack -p
   # back to original folder
