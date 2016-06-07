@@ -20,11 +20,11 @@ before_build:
   - cd Samples.Front
   - npm install
   - npm run postinstall
-
-build:
   - npm run build
   - dotnet compile
     
+build: off
+  
 artifacts:
   # put whole folder into a zip file
   - path: Samples.Front\wwwroot
