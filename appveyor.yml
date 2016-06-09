@@ -5,7 +5,6 @@ environment:
 # scripts that run after cloning repository
 install:
   # install DNX
-  - set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
   - dnvm upgrade
   # install node 
   - ps: Install-Product node $Env:nodejs_version
@@ -18,13 +17,16 @@ before_build:
   - cd %APPVEYOR_BUILD_FOLDER%
   - cd Samples.Front
   - dnu restore
+  - dnu build
   - npm install
   - npm run postinstall
   # run webpack with production flag
   - npm run build
   # back to original folder
   - cd %APPVEYOR_BUILD_FOLDER%
-    
+
+build: off
+
 artifacts:
   # put whole folder into a zip file
   - path: Samples.Front\wwwroot
