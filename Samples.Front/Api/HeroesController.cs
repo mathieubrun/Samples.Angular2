@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Mvc;
-
-// For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+using Microsoft.AspNetCore.Mvc;
 
 namespace Samples.Front.Api
 {
@@ -24,21 +22,18 @@ namespace Samples.Front.Api
             new Hero { Id = 20, Name= "Tornado" }
         };
 
-        // GET: api/values
         [HttpGet]
         public IEnumerable<Hero> Get()
         {
             return heroes;
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
         public Hero Get(int id)
         {
             return heroes.FirstOrDefault(x => x.Id == id);
         }
 
-        // POST api/values
         [HttpPost]
         public void Post([FromBody]Hero value)
         {

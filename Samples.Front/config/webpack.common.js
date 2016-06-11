@@ -1,7 +1,6 @@
 ﻿var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
 var helpers = require('./helpers');
@@ -41,11 +40,6 @@ module.exports = {
         ]
     },
     plugins: [
-        // Copy assets from the public folder
-        // Reference: https://github.com/kevlened/copy-webpack-plugin
-        new CopyWebpackPlugin([{
-            from: helpers.root('src', 'html', 'web.config')
-        }]),
         // Generate common chunks if necessary
         // Reference: https://webpack.github.io/docs/list-of-plugins.html#commonschunkplugin
         new CommonsChunkPlugin({
