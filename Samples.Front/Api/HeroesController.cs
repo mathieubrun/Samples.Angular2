@@ -9,7 +9,7 @@ namespace Samples.Front.Api
     [Route("api/[controller]")]
     public class HeroesController : Controller
     {
-        private static readonly Hero[] heroes = new Hero[] {
+        private static readonly IList<Hero> heroes = new List<Hero> {
             new Hero { Id = 11, Name= "Mr. Nice" },
             new Hero { Id = 12, Name= "Narco" },
             new Hero { Id = 13, Name= "Bombasto" },
@@ -35,8 +35,19 @@ namespace Samples.Front.Api
         }
 
         [HttpPost]
-        public void Post([FromBody]Hero value)
+        public Hero Post([FromBody]Hero value)
         {
+            value.Id = heroes.Count + 1;
+            heroes.Add(value);
+            return value;
+        }
+
+        [HttpPut("{id}")]
+        public Hero Put(int id, [FromBody]Hero value)
+        {
+            var hero = heroes.FirstOrDefault(x => x.Id == value.Id);
+            hero.Name = value.Name;
+            return hero;
         }
     }
 }

@@ -1,8 +1,7 @@
-export interface Hero {
-    id: number;
-    name: string;
+export class Hero {
+    Id: number;
+    Name: string;
 }
-
 
 /*
 Copyright 2016 Google Inc. All Rights Reserved.
