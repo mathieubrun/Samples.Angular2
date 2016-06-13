@@ -21,6 +21,10 @@ before_build:
   - npm install
   - npm run postinstall
 
+after_build:
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - dir /s > files.txt
+  
 build_script:
   # install node modules
   - cd %APPVEYOR_BUILD_FOLDER%
@@ -32,3 +36,4 @@ build_script:
 artifacts:
   # put whole folder into a zip file
   - path: Samples.Front\wwwroot
+  - path: files.txt
