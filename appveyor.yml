@@ -7,8 +7,6 @@ environment:
 
 # scripts that run after cloning repository
 install:
-  # install DNX
-  - dnvm upgrade
   # install node 
   - ps: Install-Product node $Env:nodejs_version
   - npm install -g npm
