@@ -26,8 +26,6 @@ before_build:
   # back to original folder
   - cd %APPVEYOR_BUILD_FOLDER%
 
-build: off
-
 artifacts:
   # put whole folder into a zip file
   - path: Samples.Front\wwwroot
