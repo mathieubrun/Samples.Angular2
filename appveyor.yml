@@ -20,11 +20,14 @@ before_build:
   - dotnet restore
   - npm install
   - npm run postinstall
+
+build_script:
+  # install node modules
+  - cd %APPVEYOR_BUILD_FOLDER%
+  - cd Samples.Front
   # run webpack with production flag
   - npm run build
   - dotnet build
-  # back to original folder
-  - cd %APPVEYOR_BUILD_FOLDER%
 
 artifacts:
   # put whole folder into a zip file
