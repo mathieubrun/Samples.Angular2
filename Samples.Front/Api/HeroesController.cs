@@ -49,5 +49,12 @@ namespace Samples.Front.Api
             hero.Name = value.Name;
             return hero;
         }
+
+        [HttpDelete("{id}")]
+        public void Put(int id)
+        {
+            var hero = heroes.FirstOrDefault(x => x.Id == id);
+            heroes.Remove(hero);
+        }
     }
 }
