@@ -29,7 +29,7 @@ build_script:
   # install node modules
   - cd %APPVEYOR_BUILD_FOLDER%
   - cd Samples.Front
-  # run webpack with production flag
+  - npm run test
   - npm run build
   - dotnet build
 
