@@ -1,10 +1,6 @@
 ﻿module.exports = {
     devtool: 'inline-source-map',
 
-    resolve: {
-        extensions: ['', '.ts', '.js']
-    },
-
     module: {
         loaders: [
         {
@@ -22,7 +18,7 @@
         },
         {
             test: /\.css$/,
-            loader: 'null'
+            loader: 'raw'
         }
         ]
     }
