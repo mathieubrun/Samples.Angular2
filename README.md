@@ -2,7 +2,7 @@ Prerequisites
 -------------
 
 - [Visual Studio 2015](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx)
-- [ASP.NET 5](https://docs.asp.net/en/latest/getting-started/installing-on-windows.html)
+- [ASP.NET Core](https://www.microsoft.com/net/core#windows)
 - [Typescript tools for VS2015](https://www.microsoft.com/en-us/download/confirmation.aspx?id=48593)
 - [NPM task runner](https://visualstudiogallery.msdn.microsoft.com/8f2f2cbc-4da5-43ba-9de2-c9d08ade4941)
 - [Webpack task runner](https://visualstudiogallery.msdn.microsoft.com/5497fd10-b1ba-474c-8991-1438ae47012a)
@@ -16,3 +16,4 @@ More details
 - [Part 4 : source mapping](http://mathieubrun.github.io/archive/2016/04/21/aspnet-5-angular-2-part4-source-mapping)
 - [Part 5 : webpack](http://mathieubrun.github.io/archive/2016/05/08/aspnet-5-angular-2-part5-webpack)
 - [Part 6 : appveyor](http://mathieubrun.github.io/archive/2016/05/16/aspnet-5-angular-2-part6-appveyor)
+- [Part 7 : angular2 RC]()
